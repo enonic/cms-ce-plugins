@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <bean id="gsaFunctionLibrary" class="com.enonic.cms.plugin.gsasearch.GSASearchFunctionLibrary">
+    <property name="clientFilter" value="${plugin.config.client.filter}"/>
+    <property name="host" value="${plugin.config.host}"/>
+    <property name="portNumber" value="${plugin.config.port.number}"/>
+    <property name="protocol" value="${plugin.config.protocol}"/>
+    <property name="siteFilter" value="${plugin.config.site.filter}"/>
+    <property name="timeoutMs" value="${plugin.config.connection.timeout}"/>
+    <property name="userAgent" value="${plugin.config.user.agent}"/>
+    <property name="includeAttachmentContentData" value="${plugin.config.contents.includeAttachments}"/>
+  </bean>
+
+  <bean class="com.enonic.cms.api.plugin.ext.FunctionLibrary">
+    <property name="name" value="gsa"/>
+    <property name="target" ref="gsaFunctionLibrary"/>
+    <property name="displayName" value="Function Library for searching with GSA (Google Search Appliance)"/>
+  </bean>
+
+</beans>

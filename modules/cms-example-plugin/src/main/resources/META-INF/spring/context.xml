@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+  <bean class="com.enonic.cms.api.plugin.ext.FunctionLibrary">
+    <property name="name" value="example"/>
+    <property name="target">
+      <bean class="com.enonic.cms.plugin.example.function.FunctionLibraryExample"/>
+    </property>
+  </bean>
+
+  <bean class="com.enonic.cms.plugin.example.http.HttpControllerExample">
+    <property name="urlPattern" value="/site/0/api-examples/plugin/hello"/>
+  </bean>
+
+  <bean class="com.enonic.cms.plugin.example.http.HttpInterceptorExample">
+    <property name="priority" value="15"/>
+    <property name="urlPattern" value="/site/[0-3]/slow/.*"/>
+  </bean>
+
+  <bean class="com.enonic.cms.plugin.example.http.HttpResponseFilterExample">
+    <property name="priority" value="20"/>
+    <property name="urlPattern" value="/site/0/.*"/>
+  </bean>
+
+  <bean class="com.enonic.cms.plugin.example.http.HttpAutoLoginExample">
+    <property name="urlPatterns">
+      <list>
+        <value>/site/0/protected/.*</value>
+        <value>/site/0/private/.*</value>
+        <value>/myadmin/.*</value>
+      </list>
+    </property>
+  </bean>
+
+  <bean class="com.enonic.cms.plugin.example.task.TaskPluginExample"></bean>
+
+  <!-- Other examples -->
+  <bean class="com.enonic.cms.api.plugin.ext.FunctionLibrary">
+    <property name="name" value="clientExample"/>
+    <property name="target">
+      <bean class="com.enonic.cms.plugin.example.function.FunctionLibraryUsingClientExample"/>
+    </property>
+  </bean>
+
+  <bean class="com.enonic.cms.api.example.client.local.MinimalLocalClientExample">
+    <property name="urlPattern" value="/site/0/api-examples/plugin/client/local/minimal-example"/>
+    <property name="siteKey" value="0"/>
+  </bean>
+
+  <bean id="client" factory-method="getLocalClient" class="com.enonic.cms.api.client.ClientFactory"/>
+
+  <bean class="com.enonic.examples.ExamplePlugin">
+    <property name="urlPattern" value="/site/0/examples/create"/>
+    <property name="priority" value="0"/>
+    <property name="client" ref="client"/>
+  </bean>
+
+  <bean class="com.enonic.examples.ExamplePlugin">
+    <property name="urlPattern" value="/site/0/examples/delete"/>
+    <property name="priority" value="0"/>
+    <property name="client" ref="client"/>
+  </bean>
+
+  <bean class="com.enonic.examples.ExamplePlugin">
+    <property name="urlPattern" value="/site/0/examples/update"/>
+    <property name="priority" value="0"/>
+    <property name="client" ref="client"/>
+  </bean>
+</beans>
