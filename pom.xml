@@ -9,7 +9,7 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.enonic.cms.ext</groupId>
+  <groupId>com.enonic.cms.plugin</groupId>
   <artifactId>cms-ce-plugins</artifactId>
   <packaging>pom</packaging>
   <name>Enonic CMS Community Plugins</name>
