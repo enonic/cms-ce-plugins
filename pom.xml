@@ -17,7 +17,7 @@
 
   <properties>
     <distribution.repo>public</distribution.repo>
-    <cms.version>4.7.0-RC2</cms.version>
+    <cms.version>4.7.0</cms.version>
   </properties>
 
   <modules>
