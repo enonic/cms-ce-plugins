@@ -13,7 +13,7 @@
   <artifactId>cms-ce-plugins</artifactId>
   <packaging>pom</packaging>
   <name>Enonic CMS Community Plugins</name>
-  <version>1.2.0</version>
+  <version>1.2.1-SNAPSHOT</version>
 
   <properties>
     <distribution.repo>public</distribution.repo>
