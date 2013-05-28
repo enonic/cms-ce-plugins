@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
   <bean class="com.enonic.cms.ee.plugin.extractor.ExtractorPack"/>
+  <bean class="com.enonic.cms.ee.plugin.extractor.PdfExtractor"/>
 
 </beans>
         

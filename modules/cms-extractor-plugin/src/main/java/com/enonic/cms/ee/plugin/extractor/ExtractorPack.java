@@ -15,7 +15,6 @@ import org.apache.jackrabbit.extractor.MsOutlookTextExtractor;
 import org.apache.jackrabbit.extractor.MsPowerPointTextExtractor;
 import org.apache.jackrabbit.extractor.MsWordTextExtractor;
 import org.apache.jackrabbit.extractor.OpenOfficeTextExtractor;
-import org.apache.jackrabbit.extractor.PdfTextExtractor;
 import org.apache.jackrabbit.extractor.PlainTextExtractor;
 import org.apache.jackrabbit.extractor.PngTextExtractor;
 import org.apache.jackrabbit.extractor.RTFTextExtractor;
@@ -39,7 +38,6 @@ public final class ExtractorPack
         this.extractor.addTextExtractor( new MsPowerPointTextExtractor() );
         this.extractor.addTextExtractor( new MsWordTextExtractor() );
         this.extractor.addTextExtractor( new OpenOfficeTextExtractor() );
-        this.extractor.addTextExtractor( new PdfTextExtractor() );
         this.extractor.addTextExtractor( new PlainTextExtractor() );
         this.extractor.addTextExtractor( new PngTextExtractor() );
         this.extractor.addTextExtractor( new RTFTextExtractor() );
