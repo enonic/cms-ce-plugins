@@ -5,6 +5,7 @@
 
   <bean class="com.enonic.cms.ee.plugin.extractor.ExtractorPack"/>
   <bean class="com.enonic.cms.ee.plugin.extractor.PdfExtractor"/>
+  <bean class="com.enonic.cms.ee.plugin.extractor.HtmlExtractor"/>
 
 </beans>
         

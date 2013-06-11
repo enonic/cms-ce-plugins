@@ -9,7 +9,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.jackrabbit.extractor.CompositeTextExtractor;
-import org.apache.jackrabbit.extractor.HTMLTextExtractor;
 import org.apache.jackrabbit.extractor.MsExcelTextExtractor;
 import org.apache.jackrabbit.extractor.MsOutlookTextExtractor;
 import org.apache.jackrabbit.extractor.MsPowerPointTextExtractor;
@@ -32,7 +31,8 @@ public final class ExtractorPack
     public ExtractorPack()
     {
         this.extractor = new CompositeTextExtractor();
-        this.extractor.addTextExtractor( new HTMLTextExtractor() );
+        // HTML Extractor fails, dont use this
+        //this.extractor.addTextExtractor( new HTMLTextExtractor() );
         this.extractor.addTextExtractor( new MsExcelTextExtractor() );
         this.extractor.addTextExtractor( new MsOutlookTextExtractor() );
         this.extractor.addTextExtractor( new MsPowerPointTextExtractor() );
@@ -45,6 +45,7 @@ public final class ExtractorPack
 
         final String[] contentTypes = this.extractor.getContentTypes();
         this.allowedMimeTypes = new HashSet<String>( Arrays.asList( contentTypes ) );
+
     }
 
     public boolean canHandle( final String mimeType )
