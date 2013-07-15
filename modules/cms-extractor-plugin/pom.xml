@@ -14,6 +14,12 @@
   <packaging>cms-plugin</packaging>
   <name>Enonic CMS Extractor Plugin</name>
 
+  <properties>
+    <poi.version>3.9</poi.version>
+    <slf4j.version>1.7.2</slf4j.version>
+  </properties>
+
+
   <dependencies>
     <dependency>
       <groupId>org.apache.jackrabbit</groupId>
@@ -40,6 +46,14 @@
           <artifactId>pdfbox</artifactId>
           <groupId>pdfbox</groupId>
         </exclusion>
+        <exclusion>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.apache.poi</groupId>
+          <artifactId>poi-scratchpad</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -52,6 +66,36 @@
       <artifactId>pdfbox</artifactId>
       <version>1.8.1</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-scratchpad</artifactId>
+      <version>${poi.version}</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>${poi.version}</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-jdk14</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>    
   </dependencies>
 
 </project>
