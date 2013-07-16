@@ -19,4 +19,16 @@ public class ExtractorPackTest
 
         assertEquals( "Small docx file", extracted.trim() );
     }
+
+    @Test
+    public void testOdtFile()
+        throws Exception
+    {
+        final InputStream inputStream = getClass().getClassLoader().getResourceAsStream( "small.odt" );
+        final ExtractorPack extractorPack = new ExtractorPack();
+        final String extracted = extractorPack.extractText("application/vnd.oasis.opendocument.text", inputStream, "UTF-8" );
+
+        assertEquals( "Small odt file", extracted.trim() );
+    }
+
 }
