@@ -20,6 +20,9 @@ import org.apache.jackrabbit.extractor.RTFTextExtractor;
 import org.apache.jackrabbit.extractor.XMLTextExtractor;
 
 import com.enonic.cms.api.plugin.ext.TextExtractor;
+import com.enonic.cms.ee.plugin.extractor.xformat.MsExcelXslxTextExtractor;
+import com.enonic.cms.ee.plugin.extractor.xformat.MsPowerPointlPptxTextExtractor;
+import com.enonic.cms.ee.plugin.extractor.xformat.MsWordDocxTextExtractor;
 
 public final class ExtractorPack
     extends TextExtractor
@@ -37,6 +40,11 @@ public final class ExtractorPack
         this.extractor.addTextExtractor( new MsOutlookTextExtractor() );
         this.extractor.addTextExtractor( new MsPowerPointTextExtractor() );
         this.extractor.addTextExtractor( new MsWordTextExtractor() );
+
+        this.extractor.addTextExtractor( new MsWordDocxTextExtractor() );
+        this.extractor.addTextExtractor( new MsExcelXslxTextExtractor() );
+        this.extractor.addTextExtractor( new MsPowerPointlPptxTextExtractor() );
+
         this.extractor.addTextExtractor( new OpenOfficeTextExtractor() );
         this.extractor.addTextExtractor( new PlainTextExtractor() );
         this.extractor.addTextExtractor( new PngTextExtractor() );
