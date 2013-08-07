@@ -14,8 +14,7 @@ import org.slf4j.LoggerFactory;
 public class MsPowerPointlPptxTextExtractor
     extends AbstractTextExtractor
 {
-    private static final Logger logger =
-        LoggerFactory.getLogger( MsPowerPointlPptxTextExtractor.class );
+    private static final Logger logger = LoggerFactory.getLogger( MsPowerPointlPptxTextExtractor.class );
 
     public MsPowerPointlPptxTextExtractor()
     {
@@ -34,7 +33,7 @@ public class MsPowerPointlPptxTextExtractor
         }
         catch ( Exception e )
         {
-            logger.warn("Failed to extract PowerPoint text content", e);
+            logger.warn( "Failed to extract PowerPoint text content", e );
             return new StringReader( "" );
         }
     }
