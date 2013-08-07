@@ -11,10 +11,10 @@ import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MsWordDocxTextExtractor extends AbstractTextExtractor
+public class MsWordDocxTextExtractor
+    extends AbstractTextExtractor
 {
-    private static final Logger logger =
-        LoggerFactory.getLogger( MsWordDocxTextExtractor.class );
+    private static final Logger logger = LoggerFactory.getLogger( MsWordDocxTextExtractor.class );
 
     public MsWordDocxTextExtractor()
     {
@@ -33,7 +33,7 @@ public class MsWordDocxTextExtractor extends AbstractTextExtractor
         }
         catch ( Exception e )
         {
-            logger.warn("Failed to extract Word text content", e);
+            logger.warn( "Failed to extract Word text content", e );
             return new StringReader( "" );
         }
     }

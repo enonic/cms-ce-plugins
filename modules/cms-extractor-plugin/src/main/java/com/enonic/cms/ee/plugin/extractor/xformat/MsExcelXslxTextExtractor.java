@@ -14,8 +14,7 @@ import org.slf4j.LoggerFactory;
 public class MsExcelXslxTextExtractor
     extends AbstractTextExtractor
 {
-    private static final Logger logger =
-        LoggerFactory.getLogger( MsExcelXslxTextExtractor.class );
+    private static final Logger logger = LoggerFactory.getLogger( MsExcelXslxTextExtractor.class );
 
     public MsExcelXslxTextExtractor()
     {
@@ -34,7 +33,7 @@ public class MsExcelXslxTextExtractor
         }
         catch ( Exception e )
         {
-            logger.warn("Failed to extract Excel text content", e);
+            logger.warn( "Failed to extract Excel text content", e );
             return new StringReader( "" );
         }
     }
