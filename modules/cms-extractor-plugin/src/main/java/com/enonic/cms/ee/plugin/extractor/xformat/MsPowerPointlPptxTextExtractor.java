@@ -18,7 +18,7 @@ public class MsPowerPointlPptxTextExtractor
 
     public MsPowerPointlPptxTextExtractor()
     {
-        super( new String[]{"application/vnd.openxmlformats-officedocument.presentationml.presentation\n"} );
+        super( new String[]{"application/vnd.openxmlformats-officedocument.presentationml.presentation"} );
     }
 
     @Override
