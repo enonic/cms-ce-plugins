@@ -22,7 +22,6 @@
 
   <modules>
     <module>modules/cms-example-plugin</module>
-    <module>modules/cms-extractor-plugin</module>
     <module>modules/cms-confluence-plugin</module>
     <module>modules/cms-gsasearch-plugin</module>
   </modules>
