@@ -17,7 +17,7 @@
 
   <properties>
     <distribution.repo>public</distribution.repo>
-    <cms.version>4.7.2</cms.version>
+    <cms.version>4.7.14</cms.version>
   </properties>
 
   <modules>
@@ -55,14 +55,14 @@
   <repositories>
     <repository>
       <id>enonic.repo</id>
-      <url>http://repo.enonic.com/maven</url>
+      <url>http://repo.enonic.com/public</url>
     </repository>
   </repositories>
 
   <pluginRepositories>
     <pluginRepository>
       <id>enonic.repo</id>
-      <url>http://repo.enonic.com/maven</url>
+      <url>http://repo.enonic.com/public</url>
     </pluginRepository>
   </pluginRepositories>
 
